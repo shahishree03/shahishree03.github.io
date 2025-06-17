@@ -26,46 +26,47 @@ export const Projects = () => {
 
   const projects = [
     {
-      title: 'E-Commerce Microservices Platform',
-      description: 'A scalable e-commerce platform built with microservices architecture, featuring user authentication, product catalog, order management, and payment processing.',
-      image: '/api/placeholder/600/400',
+      title: 'Vehicle Detection System',
+      description: 'This project implements a real-time Vehicle Detection System using Python, OpenCV, and YOLOv3. The system is designed to monitor traffic flow, detect vehicles, and manage parking zones efficiently. It provides a solution for urban traffic congestion and parking challenges through accurate vehicle detection and data processing.',
+      image: '/projects/image.png',
       tech: ['React', 'Node.js', 'Docker', 'Kubernetes', 'MongoDB', 'Redis'],
       features: [
-        'Microservices architecture with Docker containers',
-        'Kubernetes orchestration for high availability',
-        'CI/CD pipeline with automated testing and deployment',
-        'Real-time notifications using WebSocket connections'
+        'Real-Time Vehicle Detection: Detects vehicles in traffic and parking zones with 95.4% accuracy.',
+        'Traffic Monitoring: Tracks vehicle flow and congestion in real-time',
+         'Parking Management: Provides updates on available parking spaces and maintains historical parking data.',
+        'Data Storage: Stores vehicle count and parking data in a SQL database for analysis and reporting.'
       ],
-      github: 'https://github.com/sarahchen/ecommerce-platform',
-      demo: 'https://ecommerce-demo.sarahchen.dev'
+      github: 'https://github.com/shahishree03/vehicle_detection'
+      //demo: 'https://ecommerce-demo.shahishreshth.dev'
     },
     {
-      title: 'DevOps Dashboard & Monitoring',
-      description: 'A comprehensive monitoring dashboard for DevOps teams to track application performance, infrastructure metrics, and deployment status across multiple environments.',
-      image: '/api/placeholder/600/400',
-      tech: ['Vue.js', 'Python', 'Prometheus', 'Grafana', 'AWS', 'Terraform'],
+      title: 'OTT PLATFORM',
+      description: 'Yoi Keiken is a demo Over-The-Top (OTT) platform designed to deliver a seamless streaming experience similar to popular platforms like Netflix. The app leverages the TMDb API to provide users with an up-to-date and diverse library of movies and TV shows, categorized by genres and trends. Firebase is used for user authentication and storing personalized data such as favorites. The front-end is built using React and Redux for state management, with additional libraries for routing, forms, animations, and UI components, ensuring a modern, fast, and responsive interface. Users can securely log in, browse content, search for titles, and curate their own list of favorite movies and series, all within an engaging and interactive UI.',
+      image: '/projects/ott.png',
+      tech: ['React', 'Redux', 'SCSS', 'Framer Motion', 'API', 'Netlify','Deploy'],
       features: [
-        'Real-time metrics visualization with custom dashboards',
-        'Automated alerting system for critical incidents',
-        'Multi-cloud infrastructure monitoring',
-        'Deployment pipeline status tracking'
+        'Comprehensive Movie & Series Catalog: Integrates with The Movie Database (TMDb) API to fetch and display a wide range of movies and TV series, including trending, top-rated, and various genres (Action, Comedy, Animation, etc.)',
+        'User Authentication & Personalization: Utilizes Firebase Authentication for secure sign-in/sign-up and stores user-specific preferences, enabling each user to have a personalized watchlist and favorites.',
+        'Favorites & Watchlist Management: Allows users to add movies and series to their favorites for quick and easy access, supporting a custom, user-specific viewing experience.',
+        'Modern UI/UX & Responsive Design: Built with React, Redux, SCSS, and enhanced with libraries like SwiperJS and Framer Motion for smooth transitions and a visually appealing, device-friendly interface.'
       ],
-      github: 'https://github.com/sarahchen/devops-dashboard',
-      demo: 'https://monitoring.sarahchen.dev'
+      github: 'https://github.com/shahishree03/OTT_',
+      demo: 'https://youtu.be/syvMPwN3zjY?si=OogeWh0X3kmjG4Wm'
+      
     },
     {
-      title: 'Serverless Data Processing Pipeline',
-      description: 'An automated data processing pipeline using serverless technologies to handle large-scale data ingestion, transformation, and analytics.',
-      image: '/api/placeholder/600/400',
-      tech: ['AWS Lambda', 'Python', 'Apache Kafka', 'Elasticsearch', 'S3', 'CloudFormation'],
+      title: 'Cloud Attendance System',
+      description: 'The **Attendance System** is an application designed for efficient management and tracking of attendance in organizations, schools, or other groups.',
+      image: '/projects/image1.png',
+      tech: ['AWS EC2', 'HTML','SCSS','CSS','PHP' ,'S3','MYSQL'],
       features: [
-        'Event-driven architecture with AWS Lambda',
-        'Real-time data streaming with Apache Kafka',
-        'Automated data transformation and validation',
-        'Scalable storage and search with Elasticsearch'
+      'User Authentication: Secure login system to ensure only authorized users can access and manage attendance data.',
+      'Attendance Recording: Simple and efficient interface for marking daily attendance.',
+      'Report Generation: Automated creation of attendance summaries and detailed reports for analysis',
+      'Role Management: Supports multiple user roles (Admin, Employee) with tailored permissions.'
       ],
-      github: 'https://github.com/sarahchen/serverless-pipeline',
-      demo: 'https://pipeline.sarahchen.dev'
+      github: 'https://github.com/HarshitShukla01/attendance_system',
+      demo: 'https://attendancesystem.infinityfreeapp.com/'
     }
   ];
 
@@ -163,7 +164,7 @@ export const Projects = () => {
         </div>
 
         {/* Project Details Modal-like Section */}
-        {selectedProject !== null && (
+     {/*   {selectedProject !== null && (
           <div className={`mt-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: '0.6s' }}>
             <div className="bg-gradient-to-br from-slate-800/80 to-slate-700/60 backdrop-blur-sm p-8 rounded-xl border border-purple-500/30">
               <h3 className="text-2xl font-bold text-white mb-4">
@@ -199,7 +200,7 @@ export const Projects = () => {
               </div>
             </div>
           </div>
-        )}
+        )}*/}
       </div>
     </div>
   );

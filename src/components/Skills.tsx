@@ -26,37 +26,46 @@ export const Skills = () => {
     {
       title: 'Languages',
       skills: [
-        { name: 'JavaScript', level: 95 },
-        { name: 'TypeScript', level: 90 },
-        { name: 'Python', level: 85 },
-        { name: 'Bash/Shell', level: 80 },
+        { name: 'JavaScript', level: 65},
+        { name: 'HTML', level: 75 },
+        { name: 'Python', level: 80 },
+        { name: 'CPP', level: 85 },
+        { name: 'CSS', level: 60 },
       ],
     },
     {
-      title: 'DevOps Tools',
+      title: 'Cloud & DevOps Tools',
       skills: [
-        { name: 'Docker', level: 90 },
-        { name: 'Kubernetes', level: 85 },
-        { name: 'Jenkins', level: 80 },
+        { name: 'Docker', level: 60 },
+        { name: 'Kubernetes', level: 60 },
+        { name: 'Jenkins', level: 60 },
         { name: 'GitLab CI/CD', level: 85 },
+         { name: 'AWS', level: 75 },
+      {name: 'Microservices' ,level :60}
       ],
     },
     {
-      title: 'Cloud Platforms',
+      title: 'Bacend , Database & API ',
       skills: [
-        { name: 'AWS', level: 88 },
-        { name: 'Azure', level: 75 },
-        { name: 'Google Cloud', level: 70 },
-        { name: 'DigitalOcean', level: 85 },
+       { name: 'Node.js', level: 60 },
+        { name: 'MongoDB', level: 60 },
+        { name: 'RESTful APIs', level: 75 },
+        {name: 'MVP', level:60}
       ],
     },
     {
-      title: 'Infrastructure',
+      title: 'Artificial Intelligence & Machine Learning',
       skills: [
-        { name: 'Terraform', level: 85 },
-        { name: 'Ansible', level: 80 },
-        { name: 'Prometheus', level: 75 },
-        { name: 'Grafana', level: 78 },
+        
+        { name: 'Machine Learning', level: 60 },
+        { name: 'Deep Learning', level: 60 },
+        { name: 'Natural Language Processing', level: 60 },
+        { name: 'Computer Vision', level: 60 },
+        { name: 'Reinforcement Learning', level: 60 },
+        { name: 'Generative AI', level: 60 },
+        { name: 'AI Tools', level: 60 },
+        { name: 'RAG', level: 75 }
+
       ],
     },
   ];
@@ -70,7 +79,7 @@ export const Skills = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-indigo-500 mx-auto rounded-full" />
           <p className="text-gray-300 text-lg mt-6 max-w-2xl mx-auto">
-            A comprehensive toolkit spanning full-stack development, cloud infrastructure, and DevOps automation
+            A comprehensive toolkit spanning development, cloud infrastructure, and DevOps automation
           </p>
         </div>
 
@@ -124,7 +133,7 @@ export const Skills = () => {
           <div className="flex flex-wrap justify-center gap-4">
             {[
               'React', 'Node.js', 'Docker', 'Kubernetes', 'AWS', 'MongoDB', 
-              'PostgreSQL', 'Redis', 'Nginx', 'Linux', 'Git', 'VS Code'
+              'MVP', 'Apache', 'Linux', 'Git', 'VS Code', 'API', 'C++', 'Problem Solving', 'Data Structures', 'Algorithms', 'Machine Learning'
             ].map((tech, index) => (
               <span
                 key={tech}

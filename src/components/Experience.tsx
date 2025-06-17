@@ -25,41 +25,18 @@ export const Experience = () => {
 
   const experiences = [
     {
-      role: 'Senior DevOps Engineer',
+      role: 'Cloud and Cyber Security Trainee',
       company: 'TechFlow Solutions',
-      location: 'San Francisco, CA',
-      period: '2022 - Present',
+      location: 'Noida, INDIA',
+      period: 'November 2024 - June 2025',
       achievements: [
-        'Led migration of monolithic applications to microservices architecture, reducing deployment time by 75%',
-        'Implemented comprehensive CI/CD pipelines using GitLab CI and Jenkins, serving 50+ development teams',
-        'Designed and deployed multi-region AWS infrastructure with 99.9% uptime SLA',
-        'Established monitoring and alerting systems using Prometheus and Grafana, reducing MTTR by 60%'
+        'Collected and reviewed 50+ academic and industry references related to MITRE TTP and CAPEC and performed 30+ SonarQube scans to extract CTI and CVSS data. Implemented a risk profiling model that increased detection rates to 85%',
+        'Produced a threat report with CTI-driven insights, improving critical vulnerability identification by 20% and securing stakeholder approval for future planning (FY24)',
+        'Launched an enterprise-wide AI vulnerability program (FY25) to enhance system security.',
+        'Developed custom tools for risk classification and vendor analysis, automated profile updates, and boosted client productivity by 20%.'
       ]
     },
-    {
-      role: 'Full-Stack Developer & DevOps Specialist',
-      company: 'StartupVenture Inc.',
-      location: 'Austin, TX',
-      period: '2020 - 2022',
-      achievements: [
-        'Developed scalable React applications serving 100K+ monthly active users',
-        'Built and maintained Node.js APIs handling 1M+ requests per day',
-        'Containerized applications using Docker and orchestrated with Kubernetes',
-        'Automated infrastructure provisioning using Terraform, reducing setup time by 80%'
-      ]
-    },
-    {
-      role: 'Frontend Developer',
-      company: 'Digital Creative Agency',
-      location: 'Seattle, WA',
-      period: '2019 - 2020',
-      achievements: [
-        'Created responsive web applications using React, TypeScript, and modern CSS frameworks',
-        'Collaborated with design teams to implement pixel-perfect UI/UX designs',
-        'Optimized application performance, achieving 95+ Google Lighthouse scores',
-        'Mentored junior developers and established coding standards and best practices'
-      ]
-    }
+    
   ];
 
   return (

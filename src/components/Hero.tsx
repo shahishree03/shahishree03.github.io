@@ -56,10 +56,10 @@ export const Hero = () => {
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6">
             <span className="inline-block animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              Hi, I'm{' '}
+              Hi, I'm <span> </span>{'  '}
             </span>
             <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400 bg-clip-text text-transparent inline-block animate-fade-in" style={{ animationDelay: '0.4s' }}>
-              Sarah Chen
+               Shahi Shreshth
             </span>
           </h1>
           
@@ -69,7 +69,7 @@ export const Hero = () => {
           </div>
 
           <div className={`text-lg text-gray-400 mb-12 max-w-2xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: '0.8s' }}>
-            Full-Stack Developer & DevOps Engineer passionate about creating robust applications 
+           Developer & DevOps Engineer passionate about creating robust applications 
             and automating cloud infrastructure for optimal performance and reliability.
           </div>
 

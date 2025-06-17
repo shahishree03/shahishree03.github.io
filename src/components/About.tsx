@@ -37,19 +37,18 @@ export const About = () => {
           {/* Bio Section */}
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`} style={{ transitionDelay: '0.2s' }}>
             <div className="prose prose-invert prose-lg max-w-none">
+            
               <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                I'm a passionate <span className="text-purple-400 font-semibold">Full-Stack Developer</span> and{' '}
-                <span className="text-indigo-400 font-semibold">DevOps Engineer</span> with over 5 years of experience 
-                building scalable web applications and robust cloud infrastructure.
-              </p>
-              
-              <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                My journey began with frontend development, where I discovered my love for creating intuitive user experiences. 
-                As I delved deeper into the full development lifecycle, I became fascinated with backend systems, 
-                cloud architecture, and the art of seamless deployment pipelines.
+                I’m a <span className="text-purple-400 font-semibold">Developer</span> and{' '}
+                <span className="text-indigo-400 font-semibold">DevOps Engineer</span> who turns ambitious ideas into resilient, cloud-native applications. I architect microservices on AWS, automate end-to-end CI/CD pipelines with Jenkins and GitHub Actions, and containerize workloads using Docker & Kubernetes. With  Ansible, I codify infrastructure for repeatable, secure deployments—ensuring in highly regulated environments.On the development side, 
+                I love refactoring monoliths into scalable services, optimizing code for performance, and integrating observability to get real-time insights.
+                As a lifelong learner, I’m always exploring new IaC techniques, chaos-engineering experiments, and SRE best practices.
+
+ Ready to collaborate on your next cloud-automation or high-availability challenge? Let’s build something reliable, secure, and future-proof together.
               </p>
 
-              <p className="text-gray-300 text-lg leading-relaxed">
+
+               <p className="text-gray-300 text-lg leading-relaxed">
                 Today, I specialize in bridging the gap between development and operations, 
                 ensuring applications not only function beautifully but also scale efficiently and maintain 
                 high availability in production environments.
@@ -63,11 +62,10 @@ export const About = () => {
               <div className="bg-gradient-to-r from-purple-800/30 to-indigo-800/30 backdrop-blur-sm p-6 rounded-xl border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 transform hover:scale-105">
                 <div className="flex items-center mb-3">
                   <Code className="w-8 h-8 text-purple-400 mr-3" />
-                  <h3 className="text-xl font-semibold text-white">Frontend Development</h3>
+                  <h3 className="text-xl font-semibold text-white">Problem Solving </h3>
                 </div>
                 <p className="text-gray-300">
-                  React, TypeScript, Next.js, and modern CSS frameworks to create responsive, 
-                  interactive user interfaces that delight users.
+                 critical thinking, creative solutions, system design, debugging, and performance optimization—ensuring fast, reliable, and client-aligned outcomes.
                 </p>
               </div>
 
@@ -77,8 +75,7 @@ export const About = () => {
                   <h3 className="text-xl font-semibold text-white">Backend & APIs</h3>
                 </div>
                 <p className="text-gray-300">
-                  Node.js, Python, and database design to build robust, scalable server-side 
-                  applications and RESTful APIs.
+                  Building robust APIs and microservices with Node.js, Python, REST, and SQL/NoSQL databases, optimized for performance and reliability.
                 </p>
               </div>
 

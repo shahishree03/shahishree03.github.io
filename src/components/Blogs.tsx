@@ -25,40 +25,36 @@ export const Blogs = () => {
 
   const blogPosts = [
     {
-      title: 'Building Resilient Microservices: Lessons from Production',
-      excerpt: 'Discover the key patterns and practices for creating microservices that can handle real-world challenges, from circuit breakers to graceful degradation.',
-      readTime: '8 min read',
-      date: 'March 15, 2024',
+      title: 'CI/CD: The Secret Weapon in Your Software Development Arsenal',
+      excerpt: 'Discover the CI/CD can be visualized as a pipeline with distinct stages:Benefits of CI/CD:Getting Started with CI/CD using Docker: A Step-by-Step GuideTechLearn India: Your Gateway to CI/CD Mastery.',
+      readTime: '4 min read',
       category: 'DevOps',
-      image: '/api/placeholder/400/250',
-      link: 'https://dev.to/sarahchen/building-resilient-microservices'
+      image: '/BLOGS/cicd.png',
+      link: 'https://blog.techlearnindia.com/cicd-the-secret-weapon-in-your-software-development-arsenal'
     },
     {
-      title: 'Kubernetes Security Best Practices: A Comprehensive Guide',
-      excerpt: 'A deep dive into securing your Kubernetes clusters, covering RBAC, network policies, pod security standards, and security scanning.',
-      readTime: '12 min read',
-      date: 'February 28, 2024',
-      category: 'Security',
-      image: '/api/placeholder/400/250',
-      link: 'https://dev.to/sarahchen/kubernetes-security-guide'
+      title: 'Mathematics: Your Secret Weapon in Computer Science',
+      excerpt: 'Mathematics is the hidden force behind efficient coding, smart algorithms, and resilient system design. This blog reveals how math empowers developers to solve complex problems and innovate in computer science.',
+      readTime: '5 min read',
+      category: 'Mathematics',
+      image: '/BLOGS/a.gif',
+      link: 'https://medium.com/@shahishresth/mathematics-your-secret-weapon-in-computer-science-82b707117f66'
     },
     {
-      title: 'From Monolith to Microservices: A Strategic Migration Approach',
-      excerpt: 'Step-by-step guidance on breaking down monolithic applications into scalable microservices without disrupting your business operations.',
-      readTime: '10 min read',
-      date: 'February 10, 2024',
-      category: 'Architecture',
-      image: '/api/placeholder/400/250',
-      link: 'https://dev.to/sarahchen/monolith-to-microservices'
+      title: 'Demystifying Cloud Security: A Journey from Vulnerability to Resilience',
+      excerpt: 'Cloud security is more than protection — it’s a layered strategy to defend against threats and ensure resilience. This blog guides readers through key vulnerabilities, best practices, and a comprehensive security framework for robust cloud defense.',
+      readTime: '2 min read',
+      category: 'Cloud',
+      image: '/BLOGS/cloud_Security.png',
+      link: 'https://blog.techlearnindia.com/demystifying-cloud-security-a-journey-from-vulnerability-to-resilience'
     },
     {
-      title: 'Infrastructure as Code: Terraform Best Practices',
-      excerpt: 'Learn how to write maintainable, scalable Terraform configurations with proper state management, modules, and CI/CD integration.',
-      readTime: '6 min read',
-      date: 'January 22, 2024',
-      category: 'Infrastructure',
-      image: '/api/placeholder/400/250',
-      link: 'https://dev.to/sarahchen/terraform-best-practices'
+      title: 'Flow vs. Ethereum',
+      excerpt: 'This blog compares Flow and Ethereum across architecture, smart contracts, fees, and use cases — helping developers choose the right blockchain for their project goals and learn in-demand Ethereum skills for the Web3 future.',
+      readTime: '2 min read',
+      category: 'Cryptography',
+      image: '/BLOGS/crypto.png',
+      link: 'https://blog.techlearnindia.com/flow-vs-ethereum'
     }
   ];
 
@@ -77,14 +73,17 @@ export const Blogs = () => {
 
         <div className="grid md:grid-cols-2 gap-8">
           {blogPosts.map((post, index) => (
-            <article
+            <a
               key={index}
-              className={`group cursor-pointer transition-all duration-1000 ${
+              href={post.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`group cursor-pointer transition-all duration-1000 block ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
               style={{ transitionDelay: `${index * 0.2}s` }}
             >
-              <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/30 backdrop-blur-sm rounded-xl border border-slate-600/30 hover:border-purple-500/40 transition-all duration-300 transform hover:scale-105 overflow-hidden h-full">
+              <article className="bg-gradient-to-br from-slate-800/50 to-slate-700/30 backdrop-blur-sm rounded-xl border border-slate-600/30 hover:border-purple-500/40 transition-all duration-300 transform hover:scale-105 overflow-hidden h-full">
                 {/* Blog Image */}
                 <div className="relative overflow-hidden">
                   <img 
@@ -112,10 +111,7 @@ export const Blogs = () => {
                 {/* Blog Content */}
                 <div className="p-6">
                   <div className="flex items-center gap-4 text-sm text-gray-400 mb-3">
-                    <div className="flex items-center">
-                      <Calendar className="w-4 h-4 mr-1" />
-                      {post.date}
-                    </div>
+                    
                     <div className="flex items-center">
                       <Clock className="w-4 h-4 mr-1" />
                       {post.readTime}
@@ -145,15 +141,15 @@ export const Blogs = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-            </article>
+              </article>
+            </a>
           ))}
         </div>
 
         {/* View All Blogs Button */}
         <div className={`text-center mt-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: '0.8s' }}>
           <a 
-            href="https://dev.to/sarahchen"
+            href="https://blog.techlearnindia.com/"
             className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-lg font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
           >
             View All Blog Posts
