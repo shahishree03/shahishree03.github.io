@@ -17,6 +17,7 @@ export const Navigation = ({ activeSection }: NavigationProps) => {
     { id: 'experience', label: 'Experience' },
     { id: 'projects', label: 'Projects' },
     { id: 'blogs', label: 'Blogs' },
+    {id: 'resume', label: 'Resume'},
     { id: 'contact', label: 'Contact' },
   ];
 

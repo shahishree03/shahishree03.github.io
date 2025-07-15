@@ -1,37 +1,66 @@
 
 import { useEffect, useState } from 'react';
-import { Hero } from '@/components/Hero';
+import { Home } from '@/components/Home';
 import { Navigation } from '@/components/Navigation';
 import { About } from '@/components/About';
 import { Skills } from '@/components/Skills';
 import { Experience } from '@/components/Experience';
 import { Projects } from '@/components/Projects';
 import { Blogs } from '@/components/Blogs';
-import { Contact } from '@/components/Contact';
 import { Resume } from "@/components/Resume";
+import { Contact } from '@/components/Contact';
+
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'skills', 'experience', 'projects', 'blogs', 'contact'];
-      const scrollPosition = window.scrollY + 100;
+      const sections = ['home', 'about', 'skills', 'experience', 'projects', 'blogs', 'resume', 'contact'];
+      const scrollPosition = window.scrollY;
 
-      for (const section of sections) {
+      // If user is at the very top, always set to home
+      if (scrollPosition <= 150) {
+        setActiveSection('home');
+        return;
+      }
+
+      // Find which section is currently most visible
+      for (let i = 0; i < sections.length; i++) {
+        const section = sections[i];
         const element = document.getElementById(section);
+        
         if (element) {
-          const { offsetTop, offsetHeight } = element;
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+          const rect = element.getBoundingClientRect();
+          const elementTop = window.scrollY + rect.top;
+          const elementBottom = elementTop + rect.height;
+          
+          // Check if we're in this section (with some buffer)
+          if (scrollPosition >= elementTop - 300 && scrollPosition < elementBottom - 100) {
             setActiveSection(section);
-            break;
+            return;
           }
         }
       }
     };
 
+    // Force set to home initially
+    setActiveSection('home');
+    
+    // Ensure page starts at the top
+    window.scrollTo({ top: 0, behavior: 'auto' });
+
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    
+    // Also listen for load and resize events to handle edge cases
+    window.addEventListener('load', () => setActiveSection('home'));
+    window.addEventListener('resize', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('load', () => setActiveSection('home'));
+      window.removeEventListener('resize', handleScroll);
+    };
   }, []);
 
   return (
@@ -39,7 +68,7 @@ const Index = () => {
       <Navigation activeSection={activeSection} />
       
       <section id="home">
-        <Hero />
+        <Home />
       </section>
       
       <section id="about">
@@ -63,7 +92,7 @@ const Index = () => {
       </section>
 
       <section id ="resume">
-        <Resume/>
+        <Resume />
       </section>
       
       <section id="contact">

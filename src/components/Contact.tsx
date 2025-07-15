@@ -287,15 +287,7 @@ ${formData.message}
                   </div>
                 </div>
 
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-indigo-600 to-blue-600 rounded-lg flex items-center justify-center mr-4">
-                    <Phone className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <p className="text-white font-semibold">Phone</p>
-                    <p className="text-gray-300">+91 9315230844</p>
-                  </div>
-                </div>
+                
 
                 <div className="flex items-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-4">

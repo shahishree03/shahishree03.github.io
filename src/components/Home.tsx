@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 
-export const Hero = () => {
+export const Home = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {

@@ -1,0 +1,23 @@
+/*
+  # Security Headers
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), serial=(), bluetooth=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' cdn.emailjs.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.googleapis.com fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' api.emailjs.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';
+
+# Protect sensitive files
+/Shahi__Shreshth_.pdf
+  X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, notranslate
+  Cache-Control: private, no-cache, no-store, must-revalidate
+  
+# Block access to source maps and config files
+/*.map
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store
+  
+/*.config.*
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store

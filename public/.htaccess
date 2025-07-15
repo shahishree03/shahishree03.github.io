@@ -1,0 +1,66 @@
+# Security Headers
+<IfModule mod_headers.c>
+    Header always set X-Frame-Options "DENY"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' cdn.emailjs.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.googleapis.com fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' api.emailjs.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"
+</IfModule>
+
+# Protect sensitive files
+<Files "*.pdf">
+    Header set X-Robots-Tag "noindex, nofollow, noarchive, nosnippet, notranslate"
+    Header set Cache-Control "private, no-cache, no-store, must-revalidate"
+</Files>
+
+# Block access to source maps and config files
+<FilesMatch "\.(map|config\.js|config\.ts|env)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Block access to sensitive directories
+<DirectoryMatch "/(src|node_modules|\.git|\.env)">
+    Order allow,deny
+    Deny from all
+</DirectoryMatch>
+
+# Prevent access to sensitive files
+<FilesMatch "(\.env|\.gitignore|package\.json|yarn\.lock|package-lock\.json)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Block user agents that might be bots/scrapers
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Block common scraping tools
+    RewriteCond %{HTTP_USER_AGENT} (wget|curl|libwww|lwp-download|lynx) [NC]
+    RewriteRule .* - [F,L]
+    
+    # Block empty user agents
+    RewriteCond %{HTTP_USER_AGENT} ^$
+    RewriteRule .* - [F,L]
+    
+    # Block suspicious bot patterns
+    RewriteCond %{HTTP_USER_AGENT} (scraper|crawler|spider|bot).*$ [NC]
+    RewriteCond %{HTTP_USER_AGENT} !(googlebot|bingbot|slurp|duckduckbot|baiduspider|yandexbot|facebookexternalhit|twitterbot|linkedinbot|whatsapp) [NC]
+    RewriteRule .* - [F,L]
+</IfModule>
+
+# Disable server signature
+ServerSignature Off
+
+# Disable directory browsing
+Options -Indexes
+
+# Prevent hotlinking
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTP_REFERER} !^$
+    RewriteCond %{HTTP_REFERER} !^https://(www\.)?shahishree03\.github\.io/ [NC]
+    RewriteCond %{HTTP_REFERER} !^https://(www\.)?localhost/ [NC]
+    RewriteRule \.(pdf|doc|docx|xls|xlsx)$ - [F,L]
+</IfModule>
