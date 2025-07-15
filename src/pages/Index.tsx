@@ -8,6 +8,7 @@ import { Experience } from '@/components/Experience';
 import { Projects } from '@/components/Projects';
 import { Blogs } from '@/components/Blogs';
 import { Contact } from '@/components/Contact';
+import { Resume } from "@/components/Resume";
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -59,6 +60,10 @@ const Index = () => {
       
       <section id="blogs">
         <Blogs />
+      </section>
+
+      <section id ="resume">
+        <Resume/>
       </section>
       
       <section id="contact">
