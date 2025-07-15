@@ -8,7 +8,7 @@ const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_RESUME_EMAILJS_TEMPLATE_ID;
 const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-const RESUME_URL = "/Shahi__Shreshth_.pdf"; 
+const RESUME_URL = "/Shahi_Shreshth.pdf"; 
 
 export const Resume = () => {
   const [showForm, setShowForm] = useState(false);
